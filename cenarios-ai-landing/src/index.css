@@ -1,0 +1,41 @@
+:root {
+  /* Cores da Paleta CenárioAI */
+  --color-accent-teal: #0A5A72; /* Azul Petróleo Escuro */
+  --color-cta-teal: #004D60; /* Tom mais escuro para o botão */
+  --color-terracotta: #D37536; /* Tom terroso para logo e gráficos */
+  --color-text-dark: #212529; 
+  --color-background-soft: #F0F0F0;
+  --color-menu-link: #333;
+
+  --header-height: 65px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  color: var(--color-text-dark);
+}
+
+/* Estilo do CTA Primário (Reutilizável) */
+.btn-primary {
+  background-color: var(--color-cta-teal);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border: none; /* Adicione isso para consistência */
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-teal);
+}
+
+main {
+  padding-top: var(--header-height); 
+}

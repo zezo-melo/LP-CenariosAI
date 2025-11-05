@@ -1,0 +1,63 @@
+/* src/components/Header.css */
+
+.main-header {
+    position: fixed; /* Torna o cabeçalho fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Fundo branco para a estética clean */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    padding: 20px 0;
+  }
+  
+  .header-container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Espaça logo, menu e botão */
+    align-items: center;
+  }
+  
+  .logo-text {
+    /* Estilo do Logo (simulando a cor Terrosa) */
+    color: var(--color-terracotta); 
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  /* Navegação */
+  .main-nav {
+    /* Ocupa o espaço central entre o logo e o botão */
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px; /* Espaço entre os links do menu */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--color-menu-link);
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: var(--color-accent-teal); /* Destaque no hover com o Azul Petróleo */
+  }
+  
+  /* Responsividade Básica: Ocultar menu em telas menores para focar no logo e CTA */
+  @media (max-width: 1024px) {
+    .main-nav {
+      display: none; /* Em projetos reais, isso seria substituído por um menu hambúrguer */
+    }
+  }

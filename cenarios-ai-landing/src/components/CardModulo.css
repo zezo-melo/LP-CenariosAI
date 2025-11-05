@@ -1,0 +1,56 @@
+/* src/components/CardModulo.css */
+
+.card-modulo {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave para o card */
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; /* Garante que todos tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-modulo:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-icon-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .card-icon {
+    /* Estilo do ícone. Usando a cor Azul Petróleo Escuro */
+    display: inline-block;
+    font-size: 3rem; 
+    color: var(--color-accent-teal); 
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Faz o texto ocupar o máximo de espaço */
+  }
+  
+  .card-link {
+    color: var(--color-cta-teal);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    margin-top: auto; /* Alinha o link na parte inferior do card */
+  }
+  
+  .card-link:hover {
+    color: var(--color-terracotta); /* Destaque com cor Terrosa no hover */
+  }
