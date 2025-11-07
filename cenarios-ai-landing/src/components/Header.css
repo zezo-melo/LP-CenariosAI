@@ -47,12 +47,18 @@
   .nav-link {
     text-decoration: none;
     color: var(--color-menu-link);
-    font-size: 0.95rem;
+    font-size: 1.0rem;
     transition: color 0.3s;
+    font-weight: 700;
   }
   
   .nav-link:hover {
     color: var(--color-accent-teal); /* Destaque no hover com o Azul Petróleo */
+  }
+
+  .logo-image {
+    width: 200px;
+    margin-left: 20px;
   }
   
   /* Responsividade Básica: Ocultar menu em telas menores para focar no logo e CTA */

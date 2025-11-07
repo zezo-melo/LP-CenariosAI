@@ -1,0 +1,94 @@
+/* src/sections/Impacto.css - Versão com Layout Vertical (2x2) */
+
+.impacto-section {
+  padding: 100px 0;
+  background-color: var(--color-background-soft); 
+}
+
+.impacto-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.impacto-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 20px;
+}
+
+.impacto-intro {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NOVO: Layout de GRID Vertical (2 Colunas) */
+.beneficios-grid-vertical {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 50px 30px; /* Mais espaço vertical entre os itens */
+  max-width: 1000px; /* Reduz a largura para centralizar o bloco de 4 itens */
+  margin: 0 auto;
+}
+
+.beneficio-item-vertical {
+  /* O container de cada item agora é um Flexbox verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente o ícone e o texto */
+  text-align: center;
+}
+
+.beneficio-icon-wrapper-vertical {
+  background-color: var(--color-terracotta); 
+  border-radius: 50%;
+  width: 90px; /* Ícone bem grande */
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; 
+  margin-bottom: 15px; /* Espaço entre o ícone e o texto */
+}
+
+.beneficio-icon-large {
+  font-size: 3.5rem; /* Ícone bem grande */
+  color: white; 
+}
+
+.beneficio-text-center {
+  font-size: 1.15rem; 
+  font-weight: 700; /* Mais destaque */
+  color: var(--color-text-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .beneficios-grid-vertical {
+    /* Mudar para 1 coluna em mobile */
+    grid-template-columns: 1fr;
+    max-width: none; /* Usa a largura total */
+  }
+
+  .beneficio-icon-wrapper-vertical {
+    width: 70px; 
+    height: 70px;
+  }
+  
+  .beneficio-icon-large {
+    font-size: 2.5rem;
+  }
+
+  .beneficio-text-center {
+    font-size: 1.1rem;
+  }
+}

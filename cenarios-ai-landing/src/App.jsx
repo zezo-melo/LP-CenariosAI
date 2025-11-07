@@ -2,6 +2,9 @@ import Header from './components/Header';
 import Hero from './sections/Hero';
 import SobreCenarios from './sections/SobreCenarios';
 import Modules from './sections/Modules';
+import ComoFunciona from './sections/ComoFunciona';
+import Impacto from './sections/Impacto';
+import Footer from './sections/Footer';
 
 // Importe os demais componentes de seção conforme a nossa estrutura planejada:
 // import Modules from './sections/Modules';
@@ -18,10 +21,10 @@ function App() {
         <Hero />
         <SobreCenarios />
         <Modules />
-       
-        
+        <ComoFunciona />
+        <Impacto />
       </main>
-      {/* <Footer /> */}
+        <Footer />
     </>
   );
 }

@@ -1,34 +1,120 @@
-/* src/sections/SobreCenarios.css */
+/* src/sections/SobreCenarios.css - VERSÃO COM BACKGROUND AZUL */
 
 .sobre-cenarios-section {
-    /* Usa a cor de destaque (Azul Petróleo Escuro) */
-    background-color: var(--color-accent-teal); 
-    padding: 80px 0; /* Espaçamento interno vertical */
-    width: 100%;
-  }
+  padding: 100px 0;
+  /* NOVO: Fundo Azul Petróleo */
+  background-color: var(--color-cta-teal); 
+  color: white; /* Garante que todo o texto base seja branco */
+}
+
+.sobre-cenarios-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   
+  /* Layout de duas colunas */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 50px;
+}
+
+/* --- Estilos da Coluna de Texto --- */
+.sobre-cenarios-content {
+  max-width: 65%; 
+}
+
+.sobre-cenarios-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  /* NOVO: Cor branca */
+  color: white; 
+  margin-bottom: 30px;
+}
+
+.sobre-cenarios-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  /* NOVO: Cor do texto (um branco suave) */
+  color: #EEE; 
+  margin-bottom: 20px;
+}
+
+.sobre-cenarios-text strong {
+  /* NOVO: Negrito em branco puro */
+  color: white;
+  font-weight: 700;
+}
+
+
+/* --- Estilos da Coluna Lateral (Logo e Botão) --- */
+.sobre-cenarios-aside {
+  max-width: 30%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-top: 20px; 
+}
+
+.aside-logo {
+  margin-top: 30px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 30px;
+  /* Se a logo for monocromática, o CSS pode ajudar a ajustar o brilho.
+     Se for colorida, garanta que ela tenha um bom contraste no fundo azul. */
+}
+
+/* Estilo do Novo Botão Secundário Branco (Invertido) */
+.btn-white-secondary {
+  background-color: white; /* Fundo branco (Destaque) */
+  color: var(--color-cta-teal); /* Texto azul-petróleo */
+  border: 2px solid white; /* Borda branca para manter o contraste */
+  padding: 12px 25px; 
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  width: 100%; 
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.btn-white-secondary:hover {
+  /* NOVO: Efeito de hover mais sutil ou o Terracota/Azul mais claro */
+  background-color: var(--color-terracotta); 
+  color: white;
+  border-color: var(--color-terracotta);
+}
+
+.cta-arrow-dark {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  line-height: 1; 
+  vertical-align: middle;
+}
+
+
+/* --- Responsividade --- */
+@media (max-width: 850px) {
   .sobre-cenarios-container {
-    max-width: 1200px; /* Um pouco mais estreito para foco */
-    margin: 0 auto;   
-    color: white; 
+      flex-direction: column; 
+      align-items: center;
+      text-align: center;
+  }
+
+  .sobre-cenarios-content,
+  .sobre-cenarios-aside {
+      max-width: 100%;
+  }
+
+  .aside-logo {
+      max-width: 50%; 
   }
   
-  .sobre-cenarios-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    /* Garante que o título seja branco */
-    color: white; 
+  .btn-white-secondary {
+      width: 60%; 
+      margin: 0 auto;
   }
-  
-  .sobre-cenarios-text {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    max-width: 800px; 
-  }
-  
-  /* Garante que o texto em negrito use a cor do contraste (branco) */
-  .sobre-cenarios-text strong {
-    font-weight: bold;
-  }
+}

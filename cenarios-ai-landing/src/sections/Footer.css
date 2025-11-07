@@ -1,0 +1,92 @@
+/* src/components/Rodape.css */
+
+.main-footer {
+    /* Usando a cor escura dos botões para um contraste forte */
+    background-color: var(--color-cta-teal); 
+    color: white; /* Cor do texto padrão */
+    padding: 60px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    /* Layout de 3 colunas */
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr; 
+    gap: 40px;
+  }
+  
+  /* Coluna 1: Branding */
+  .footer-branding {
+    /* Alinha a logo ao topo e o texto abaixo */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ajuste de logo para branco no rodapé */
+  .footer-logo {
+    color: white; /* A cor do logo Terrosa precisa ser branca aqui */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-copyright {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: auto; /* Empurra o copyright para o fundo da coluna */
+    opacity: 0.8;
+  }
+  
+  /* Colunas de Links */
+  .footer-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-list li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+  }
+  
+  .footer-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  
+  
+  /* --- Responsividade --- */
+  @media (max-width: 900px) {
+    .footer-container {
+      /* Mudar para 2 colunas em telas menores */
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .footer-container {
+      /* Mudar para 1 coluna em mobile, empilhando */
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .footer-branding {
+      align-items: center;
+    }
+  }

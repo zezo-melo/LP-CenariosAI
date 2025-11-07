@@ -1,102 +1,107 @@
-/* src/sections/Hero.css */
+/* src/sections/Hero.css - Versão com Background Parallax */
 
 .hero-section {
-    /* Espaçamento interno para destacar a seção Hero */
-    padding: 120px 0 100px 0; 
-    background-color: white;
-    min-height: 500px; /* Ocupa a altura restante da tela */
-  }
-  
+  padding: 80px 0; /* Aumentar o padding para dar mais altura e ver o parallax */
+  background-color: white;
+  min-height: calc(100vh - var(--header-height)); /* Ocupa a altura restante da tela */
+  position: relative; 
+
+  /* --- PROPRIEDADES DO PARALLAX --- */
+  background-image: url('../assets/background-banner.jpg'); /* Caminho da sua imagem */
+  background-attachment: fixed; /* ESSENCIAL para o efeito parallax */
+  background-position: center bottom; /* Ajustar a posição para focar no mapa */
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Alinha o conteúdo à esquerda */
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center;
+  min-height: calc(100vh - var(--header-height) - 120px); 
+  position: relative; 
+  z-index: 2; /* Garante que o conteúdo fique sobre o background */
+}
+
+.hero-content {
+  max-width: 600px;
+  /* Fundo semi-transparente para o texto ser legível sobre o mapa */
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-cta-teal);
+  border: 2px solid var(--color-cta-teal);
+  padding: 8px 18px; 
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-cta-teal);
+  color: white;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  margin-left: 80px;
+  object-fit: cover;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 900px) {
   .hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    
-    /* Layout de duas colunas */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center; 
   }
   
   .hero-content {
-    max-width: 50%;
+    max-width: 100%;
+    order: 1;
   }
-  
+
   .hero-title {
-    /* Estilo do Título Principal */
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--color-text-dark);
-    line-height: 1.1;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
-  .hero-subtitle {
-    /* Estilo do Subtítulo */
-    font-size: 1.15rem;
-    color: #555;
-    margin-bottom: 35px;
-  }
-  
+
   .hero-actions {
-    display: flex;
-    gap: 15px; /* Espaço entre os dois botões */
-    align-items: center;
+    justify-content: center;
   }
-  
-  /* Estilo do Botão Secundário (Contorno) */
-  .btn-secondary {
-    /* Contorno em Azul Petróleo */
-    background-color: transparent;
-    color: var(--color-cta-teal);
-    border: 2px solid var(--color-cta-teal);
-    padding: 8px 18px; 
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
+
+  /* Desabilita parallax em mobile para melhor performance */
+  .hero-section {
+      background-attachment: scroll; 
+      background-position: center center;
   }
-  
-  .btn-secondary:hover {
-    background-color: var(--color-cta-teal);
-    color: white;
-  }
-  
-  /* Ilustração */
-  .hero-illustration {
-    max-width: 40%;
-    text-align: right;
-  }
-  
-  .map-image {
-    width: 130%;
-    height: auto;
-    /* Garante que a imagem do mapa se destaque */
-  }
-  
-  /* Responsividade: Empilhar em telas menores */
-  @media (max-width: 900px) {
-    .hero-container {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .hero-content, .hero-illustration {
-      max-width: 100%;
-      order: 1; /* Mantenha o texto na frente */
-    }
-  
-    .hero-illustration {
-        order: 0; /* Coloque a imagem no topo em mobile */
-        margin-bottom: 30px;
-    }
-    
-    .hero-title {
-      font-size: 2rem;
-    }
-  
-    .hero-actions {
-      justify-content: center;
-    }
-  }
+}
