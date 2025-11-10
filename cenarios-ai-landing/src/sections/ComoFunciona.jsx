@@ -48,7 +48,7 @@ const ComoFunciona = () => {
           {/* NOVO ITEM: O Botão CTA na terceira coluna da linha de baixo */}
           <div className="flow-cta-wrapper">
               {/* O href deve ser ajustado para o destino da plataforma */}
-              <a href="#plataforma" className="btn-primary flow-cta-button">
+              <a href="#plataforma" className="btn-como-fncn flow-cta-button">
                   Acesse aqui! <span className="cta-arrow">→</span>
               </a>
           </div>

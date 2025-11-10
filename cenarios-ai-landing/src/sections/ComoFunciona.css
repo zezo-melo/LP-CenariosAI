@@ -10,6 +10,23 @@
     margin: 0 auto;
     padding: 0 20px;
   }
+
+  .btn-como-fncn {
+    background-color: var(--color-cta-teal);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none; /* Adicione isso para consistência */
+    cursor: pointer;
+  }
+  
+  .btn-como-fncn:hover {
+    background-color: #d37536;
+  }
+  
   
   .como-funciona-title {
     font-size: 2.5rem;
@@ -35,7 +52,26 @@
     align-items: center; 
     text-align: left;
     position: relative;
-    padding: 10px 0;
+    padding: 10px 10px;
+
+  }
+
+  .flow-step:hover {
+    background-color: #d37536;
+    padding: 10px;
+    transition: background-color 0.3s;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .flow-step:hover .step-icon-wrapper {
+    background-color: #3394b1;
+  }
+
+
+  .flow-step:hover p {
+    color: #fff;
   }
   
   /* --- Posicionamento dos Itens Inferiores (4º, 5º e CTA) --- */
@@ -71,9 +107,9 @@
       font-size: 1.2rem; /* Aumenta a fonte */
       white-space: nowrap; 
       text-align: center;
-      min-width: 100%; /* Garante que ocupe a largura da coluna */
+      min-width: 90%; /* Garante que ocupe a largura da coluna */
       box-sizing: border-box;
-      margin-top: -40px;
+      margin-top: -20px;
 
   }
   
@@ -97,9 +133,11 @@
     flex-shrink: 0; 
     margin-right: 20px; 
   }
+
   
   .step-icon {
-    font-size: 3.5rem; 
+    font-size: 2.8rem; 
+    margin-top: -5px;
     color: white; 
   }
   

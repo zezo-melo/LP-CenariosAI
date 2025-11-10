@@ -12,7 +12,7 @@
   }
   
   .card-modulo:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    transform: translateY(-15px); /* Efeito de elevação ao passar o mouse */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   }
   
