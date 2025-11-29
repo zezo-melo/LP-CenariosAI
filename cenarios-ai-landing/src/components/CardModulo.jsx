@@ -1,22 +1,25 @@
 import React from 'react';
 import './CardModulo.css';
-// Se você estiver usando ícones, precisará importá-los aqui (ex: React Icons)
-// Exemplo: import { FaDatabase, FaChartBar, FaRobot, FaBrain } from 'react-icons/fa';
 
-// O componente CardModulo aceita props para Icone, Título, Descrição e Link
-const CardModulo = ({ icon, title, description, linkText, linkHref }) => {
+const CardModulo = ({ icon, title, description, linkText, linkHref, target, delay = 0, isVisible = false }) => {
   return (
-    <div className="card-modulo">
-      {/* Ícone placeholder. Em um projeto real, você usaria SVG ou um componente de ícone */}
-      <div className="card-icon-wrapper">
-        <span className="card-icon">{icon || '📦'}</span> 
+    <div 
+      className={`card-modulo animate-on-scroll ${isVisible ? 'scale-in-visible' : ''}`}
+      style={{ 
+        opacity: isVisible ? 1 : 0, 
+        transform: isVisible ? 'scale(1)' : 'scale(0.9)',
+        transitionDelay: `${delay}s`
+      }}
+    >
+      <div className="card-icon">
+        <img src={icon} alt={title} className="module-icon" />
       </div>
-      
+
       <h3 className="card-title">{title}</h3>
-      
+
       <p className="card-description">{description}</p>
-      
-      <a href={linkHref} className="card-link">
+
+      <a href={linkHref} target={target} rel={target === "_blank" ? "noopener noreferrer" : undefined} className="card-link">
         {linkText} →
       </a>
     </div>

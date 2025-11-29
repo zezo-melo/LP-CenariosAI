@@ -1,39 +1,41 @@
-import React from 'react';
-import './Header.css'; // Importa os estilos específicos do cabeçalho
+import React, { useEffect, useState } from 'react';
+import './Header.css';
 
-// 1. Importar a imagem da logo (Assumindo que está em src/assets/)
 import LogoCenariosAI from '../assets/logo-cenarios-ai.png'; 
 
 // Dados de navegação conforme o descritivo (1 Cabeçalho Fixo)
 const navItems = [
-  { name: 'Sobre', href: '#about' },
-  { name: 'CenInha', href: '#ceninha' },
-  { name: 'Bases de Dados', href: '#bases' },
-  { name: 'Policy Briefing', href: '#policy-briefing' },
-  { name: 'Predições de desfecho (TB)', href: '#predicoes' },
-  { name: 'Contato', href: '#contact' },
+  { name: 'Sobre', href: '#sobre-cenarios' },
+  { name: 'CenInha', href: '#modules' },
+  { name: 'Bases de Dados', href: '#modules' },
+  { name: 'Policy Briefing', href: '#modules' },
+    { name: 'Contato', href: '#contact' },
 ];
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <header className="main-header">
       <div className="header-container">
-        
-        {/* Logo CenárioAI à esquerda */}
-        <div className="logo">
-          {/* 2. Substituir o <span> pelo <img> */}
+        <div className={`logo ${isVisible ? 'animate-fade-in-left' : ''}`} style={{ opacity: isVisible ? 1 : 0 }}>
+          <a href="#">
           <img 
             src={LogoCenariosAI} 
             alt="Logo CenárioAI" 
             className="logo-image" 
           />
+          </a>
         </div>
 
-        {/* Menu de Navegação centralizado/à direita */}
-        <nav className="main-nav">
+        <nav className={`main-nav ${isVisible ? 'animate-fade-in-down' : ''}`} style={{ opacity: isVisible ? 1 : 0 }}>
           <ul className="nav-list">
-            {navItems.map((item) => (
-              <li key={item.name} className="nav-item">
+            {navItems.map((item, index) => (
+              <li key={item.name} className="nav-item" style={{ animationDelay: `${0.1 * index}s` }}>
                 <a href={item.href} className="nav-link">
                   {item.name}
                 </a>
@@ -42,8 +44,7 @@ const Header = () => {
           </ul >
         </nav>
 
-        {/* Botão CTA Primário: "Acessar Plataforma" */}
-        <a href="#" className="btn-primary">
+        <a href="#" className={`btn-primary ${isVisible ? 'animate-fade-in-right' : ''}`} style={{ opacity: isVisible ? 1 : 0 }}>
           Acessar Plataforma
         </a>
       </div>

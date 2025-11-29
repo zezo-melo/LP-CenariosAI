@@ -48,12 +48,20 @@
     text-decoration: none;
     color: var(--color-menu-link);
     font-size: 1.0rem;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
     font-weight: 700;
+    position: relative;
+    transform: translateY(0);
   }
   
   .nav-link:hover {
-    color: var(--color-accent-teal); /* Destaque no hover com o Azul Petróleo */
+    color: var(--color-accent-teal);
+    transform: translateY(-2px);
+  }
+
+  .nav-item {
+    animation: fadeInDown 0.6s ease-out forwards;
+    opacity: 0;
   }
 
   .logo-image {

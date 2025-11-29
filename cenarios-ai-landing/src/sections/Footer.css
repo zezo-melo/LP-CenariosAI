@@ -2,9 +2,10 @@
 
 .main-footer {
     /* Usando a cor escura dos botões para um contraste forte */
-    background-color: var(--color-cta-teal); 
-    color: white; /* Cor do texto padrão */
+    background-color: #fff; 
+    color: #004D60; /* Cor do texto padrão */
     padding: 60px 0;
+    font-weight: 700;
   }
   
   .footer-container {
@@ -25,12 +26,6 @@
     flex-direction: column;
   }
   
-  /* Ajuste de logo para branco no rodapé */
-  .footer-logo {
-    color: white; /* A cor do logo Terrosa precisa ser branca aqui */
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
   
   .footer-copyright {
     font-size: 0.9rem;
@@ -57,11 +52,12 @@
   }
   
   .footer-link {
-    color: white;
+    color: #004D60;
     text-decoration: none;
     font-size: 1rem;
     opacity: 0.85;
     transition: opacity 0.3s;
+    font-weight: 700;
   }
   
   .footer-link:hover {
