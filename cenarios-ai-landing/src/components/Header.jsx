@@ -3,21 +3,29 @@ import './Header.css';
 
 import LogoCenariosAI from '../assets/logo-cenarios-ai.png'; 
 
-// Dados de navegação conforme o descritivo (1 Cabeçalho Fixo)
 const navItems = [
   { name: 'Sobre', href: '#sobre-cenarios' },
   { name: 'CenInha', href: '#modules' },
   { name: 'Bases de Dados', href: '#modules' },
   { name: 'Policy Briefing', href: '#modules' },
-    { name: 'Contato', href: '#contact' },
+  { name: 'Contato', href: '#contact' },
 ];
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="main-header">
@@ -41,12 +49,30 @@ const Header = () => {
                 </a>
               </li>
             ))}
-          </ul >
+          </ul>
         </nav>
 
-        <a href="#" className={`btn-primary ${isVisible ? 'animate-fade-in-right' : ''}`} style={{ opacity: isVisible ? 1 : 0 }}>
-          Acessar Plataforma
-        </a>
+        <button 
+          className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+          <ul className="mobile-nav-list">
+            {navItems.map((item) => (
+              <li key={item.name} className="mobile-nav-item">
+                <a href={item.href} className="mobile-nav-link" onClick={closeMenu}>
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );

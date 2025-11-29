@@ -28,20 +28,33 @@
   padding-bottom: 100px;
 }
 
-/* Responsividade: Mudar para 2 colunas em tablets e 1 coluna em mobile */
 @media (max-width: 1200px) {
   .modules-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modules-main-title {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .modules-section {
-    padding: 60px 0;
+    padding: 40px 0;
+  }
+
+  .modules-container {
+    padding: 0 15px;
+  }
+  
+  .modules-main-title {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
   }
   
   .modules-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    padding-bottom: 40px;
   }
 }

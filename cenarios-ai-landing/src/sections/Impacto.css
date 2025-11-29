@@ -71,12 +71,43 @@
 }
 
 
-/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .impacto-section {
+    padding: 60px 0;
+  }
+
+  .impacto-title {
+    font-size: 2rem;
+  }
+
+  .impacto-intro {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .impacto-section {
+    padding: 40px 0;
+  }
+
+  .impacto-container {
+    padding: 0 15px;
+  }
+
+  .impacto-title {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+  }
+
+  .impacto-intro {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+
   .beneficios-grid-vertical {
-    /* Mudar para 1 coluna em mobile */
     grid-template-columns: 1fr;
-    max-width: none; /* Usa a largura total */
+    max-width: none;
+    gap: 30px;
   }
 
   .beneficio-icon-wrapper-vertical {
@@ -89,6 +120,6 @@
   }
 
   .beneficio-text-center {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 }

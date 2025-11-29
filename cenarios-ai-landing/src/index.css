@@ -10,13 +10,21 @@
   --header-height: 65px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: white;
   color: var(--color-text-dark);
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 /* Estilo do CTA Primário (Reutilizável) */
@@ -31,12 +39,21 @@ body {
   border: none;
   cursor: pointer;
   transform: translateY(0);
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
   background-color: var(--color-accent-teal);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .btn-primary {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
 }
 
 main {

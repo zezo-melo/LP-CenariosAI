@@ -39,6 +39,24 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .card-modulo {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+
+  .card-link {
+    font-size: 0.9rem;
+  }
+}
+
 .card-link {
   font-weight: 600;
   color: #0066cc;

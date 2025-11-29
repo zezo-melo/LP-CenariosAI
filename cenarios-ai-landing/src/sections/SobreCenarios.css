@@ -96,25 +96,88 @@
 }
 
 
-/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .sobre-cenarios-section {
+    padding: 60px 0;
+  }
+
+  .sobre-cenarios-title {
+    font-size: 2rem;
+  }
+
+  .sobre-cenarios-text {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 850px) {
+  .sobre-cenarios-section {
+    padding: 50px 0;
+  }
+
   .sobre-cenarios-container {
-      flex-direction: column; 
-      align-items: center;
-      text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
   }
 
   .sobre-cenarios-content,
   .sobre-cenarios-aside {
-      max-width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-cenarios-title {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  .sobre-cenarios-text {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
   }
 
   .aside-logo {
-      max-width: 50%; 
+    max-width: 50%;
+    margin-top: -30px;
+    margin-bottom: 20px;
   }
   
   .btn-white-secondary {
-      width: 60%; 
-      margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-cenarios-section {
+    padding: 40px 0;
+  }
+
+  .sobre-cenarios-container {
+    padding: 0 15px;
+  }
+
+  .sobre-cenarios-title {
+    font-size: 1.5rem;
+  }
+
+  .sobre-cenarios-text {
+    font-size: 0.9rem;
+  }
+
+  .aside-logo {
+    max-width: 60%;
+  }
+
+  .btn-white-secondary {
+    width: 100%;
+    max-width: none;
+    font-size: 0.9rem;
+    padding: 12px 20px;
   }
 }
