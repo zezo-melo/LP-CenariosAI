@@ -71,6 +71,28 @@
     width: 200px;
     margin-left: 20px;
   }
+
+  .header-btn-primary {
+    background-color: var(--color-cta-teal);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    transform: translateY(0);
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+
+  .header-btn-primary:hover {
+    background-color: var(--color-accent-teal);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
   
   .hamburger-menu {
     display: none;
@@ -174,6 +196,12 @@
     .logo-image {
       width: 150px;
       margin-left: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-btn-primary {
+      display: none;
     }
   }
 

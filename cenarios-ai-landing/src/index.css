@@ -25,6 +25,7 @@ body {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Estilo do CTA Primário (Reutilizável) */
